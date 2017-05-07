@@ -13,20 +13,9 @@
 		B58CA6901EBEE94E00F03677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58CA68E1EBEE94E00F03677 /* Main.storyboard */; };
 		B58CA6921EBEE94F00F03677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B58CA6911EBEE94F00F03677 /* Assets.xcassets */; };
 		B58CA6951EBEE94F00F03677 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58CA6931EBEE94F00F03677 /* LaunchScreen.storyboard */; };
-		B58CA6A01EBEE94F00F03677 /* SoluDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CA69F1EBEE94F00F03677 /* SoluDateTests.swift */; };
-		B58CA6ED1EBF0D4400F03677 /* SoluDate.h in Headers */ = {isa = PBXBuildFile; fileRef = B58CA6EB1EBF0D4400F03677 /* SoluDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B58CA6F11EBF0D5500F03677 /* SoluDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D78DFCE2601A6428BE7157 /* SoluDate.swift */; };
+		B58CA6FB1EBF157200F03677 /* SoluDate.h in Headers */ = {isa = PBXBuildFile; fileRef = B58CA6F91EBF157200F03677 /* SoluDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B58CA6FF1EBF159400F03677 /* SoluDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D78DFCE2601A6428BE7157 /* SoluDate.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B58CA69C1EBEE94F00F03677 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B58CA67F1EBEE94E00F03677 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B58CA6861EBEE94E00F03677;
-			remoteInfo = SoluDate;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		B58CA6BB1EBF098800F03677 /* Embed Frameworks */ = {
@@ -50,14 +39,9 @@
 		B58CA6911EBEE94F00F03677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B58CA6941EBEE94F00F03677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B58CA6961EBEE94F00F03677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B58CA69B1EBEE94F00F03677 /* SoluDateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoluDateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B58CA69F1EBEE94F00F03677 /* SoluDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoluDateTests.swift; sourceTree = "<group>"; };
-		B58CA6A11EBEE94F00F03677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B58CA6B11EBF098800F03677 /* SoluDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoluDate.h; sourceTree = "<group>"; };
-		B58CA6B21EBF098800F03677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B58CA6E91EBF0D4400F03677 /* SoluDate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoluDate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B58CA6EB1EBF0D4400F03677 /* SoluDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoluDate.h; sourceTree = "<group>"; };
-		B58CA6EC1EBF0D4400F03677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B58CA6F71EBF157200F03677 /* SoluDate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoluDate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B58CA6F91EBF157200F03677 /* SoluDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoluDate.h; sourceTree = "<group>"; };
+		B58CA6FA1EBF157200F03677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,14 +52,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B58CA6981EBEE94F00F03677 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B58CA6E51EBF0D4400F03677 /* Frameworks */ = {
+		B58CA6F31EBF157200F03677 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -97,9 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				B58CA6891EBEE94E00F03677 /* SoluDate */,
-				B58CA69E1EBEE94F00F03677 /* SoluDateTests */,
-				B58CA6B01EBF098800F03677 /* SoluDate */,
-				B58CA6EA1EBF0D4400F03677 /* SoluDate */,
+				B58CA6F81EBF157200F03677 /* SoluDate */,
 				B58CA6881EBEE94E00F03677 /* Products */,
 				12D78F273BA2D213A0655057 /* SoLuDate */,
 			);
@@ -109,8 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				B58CA6871EBEE94E00F03677 /* Sample.app */,
-				B58CA69B1EBEE94F00F03677 /* SoluDateTests.xctest */,
-				B58CA6E91EBF0D4400F03677 /* SoluDate.framework */,
+				B58CA6F71EBF157200F03677 /* SoluDate.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,29 +102,11 @@
 			path = SoluDate;
 			sourceTree = "<group>";
 		};
-		B58CA69E1EBEE94F00F03677 /* SoluDateTests */ = {
+		B58CA6F81EBF157200F03677 /* SoluDate */ = {
 			isa = PBXGroup;
 			children = (
-				B58CA69F1EBEE94F00F03677 /* SoluDateTests.swift */,
-				B58CA6A11EBEE94F00F03677 /* Info.plist */,
-			);
-			path = SoluDateTests;
-			sourceTree = "<group>";
-		};
-		B58CA6B01EBF098800F03677 /* SoluDate */ = {
-			isa = PBXGroup;
-			children = (
-				B58CA6B11EBF098800F03677 /* SoluDate.h */,
-				B58CA6B21EBF098800F03677 /* Info.plist */,
-			);
-			path = SoluDate;
-			sourceTree = "<group>";
-		};
-		B58CA6EA1EBF0D4400F03677 /* SoluDate */ = {
-			isa = PBXGroup;
-			children = (
-				B58CA6EB1EBF0D4400F03677 /* SoluDate.h */,
-				B58CA6EC1EBF0D4400F03677 /* Info.plist */,
+				B58CA6F91EBF157200F03677 /* SoluDate.h */,
+				B58CA6FA1EBF157200F03677 /* Info.plist */,
 			);
 			path = SoluDate;
 			sourceTree = "<group>";
@@ -158,11 +114,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B58CA6E61EBF0D4400F03677 /* Headers */ = {
+		B58CA6F41EBF157200F03677 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B58CA6ED1EBF0D4400F03677 /* SoluDate.h in Headers */,
+				B58CA6FB1EBF157200F03677 /* SoluDate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,32 +143,14 @@
 			productReference = B58CA6871EBEE94E00F03677 /* Sample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B58CA69A1EBEE94F00F03677 /* SoluDateTests */ = {
+		B58CA6F61EBF157200F03677 /* SoluDate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B58CA6A71EBEE94F00F03677 /* Build configuration list for PBXNativeTarget "SoluDateTests" */;
+			buildConfigurationList = B58CA6FC1EBF157200F03677 /* Build configuration list for PBXNativeTarget "SoluDate" */;
 			buildPhases = (
-				B58CA6971EBEE94F00F03677 /* Sources */,
-				B58CA6981EBEE94F00F03677 /* Frameworks */,
-				B58CA6991EBEE94F00F03677 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B58CA69D1EBEE94F00F03677 /* PBXTargetDependency */,
-			);
-			name = SoluDateTests;
-			productName = SoluDateTests;
-			productReference = B58CA69B1EBEE94F00F03677 /* SoluDateTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B58CA6E81EBF0D4400F03677 /* SoluDate */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B58CA6EE1EBF0D4400F03677 /* Build configuration list for PBXNativeTarget "SoluDate" */;
-			buildPhases = (
-				B58CA6E41EBF0D4400F03677 /* Sources */,
-				B58CA6E51EBF0D4400F03677 /* Frameworks */,
-				B58CA6E61EBF0D4400F03677 /* Headers */,
-				B58CA6E71EBF0D4400F03677 /* Resources */,
+				B58CA6F21EBF157200F03677 /* Sources */,
+				B58CA6F31EBF157200F03677 /* Frameworks */,
+				B58CA6F41EBF157200F03677 /* Headers */,
+				B58CA6F51EBF157200F03677 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -220,7 +158,7 @@
 			);
 			name = SoluDate;
 			productName = SoluDate;
-			productReference = B58CA6E91EBF0D4400F03677 /* SoluDate.framework */;
+			productReference = B58CA6F71EBF157200F03677 /* SoluDate.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -237,12 +175,7 @@
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
-					B58CA69A1EBEE94F00F03677 = {
-						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = B58CA6861EBEE94E00F03677;
-					};
-					B58CA6E81EBF0D4400F03677 = {
+					B58CA6F61EBF157200F03677 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -262,8 +195,7 @@
 			projectRoot = "";
 			targets = (
 				B58CA6861EBEE94E00F03677 /* Sample */,
-				B58CA69A1EBEE94F00F03677 /* SoluDateTests */,
-				B58CA6E81EBF0D4400F03677 /* SoluDate */,
+				B58CA6F61EBF157200F03677 /* SoluDate */,
 			);
 		};
 /* End PBXProject section */
@@ -279,14 +211,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B58CA6991EBEE94F00F03677 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B58CA6E71EBF0D4400F03677 /* Resources */ = {
+		B58CA6F51EBF157200F03677 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -306,31 +231,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B58CA6971EBEE94F00F03677 /* Sources */ = {
+		B58CA6F21EBF157200F03677 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B58CA6A01EBEE94F00F03677 /* SoluDateTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B58CA6E41EBF0D4400F03677 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B58CA6F11EBF0D5500F03677 /* SoluDate.swift in Sources */,
+				B58CA6FF1EBF159400F03677 /* SoluDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B58CA69D1EBEE94F00F03677 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B58CA6861EBEE94E00F03677 /* Sample */;
-			targetProxy = B58CA69C1EBEE94F00F03677 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B58CA68E1EBEE94E00F03677 /* Main.storyboard */ = {
@@ -471,35 +380,7 @@
 			};
 			name = Release;
 		};
-		B58CA6A81EBEE94F00F03677 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = SoluDateTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haithngn.SoluDateTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoluDate.app/SoluDate";
-			};
-			name = Debug;
-		};
-		B58CA6A91EBEE94F00F03677 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = SoluDateTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haithngn.SoluDateTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoluDate.app/SoluDate";
-			};
-			name = Release;
-		};
-		B58CA6EF1EBF0D4400F03677 /* Debug */ = {
+		B58CA6FD1EBF157200F03677 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -522,7 +403,7 @@
 			};
 			name = Debug;
 		};
-		B58CA6F01EBF0D4400F03677 /* Release */ = {
+		B58CA6FE1EBF157200F03677 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -566,20 +447,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B58CA6A71EBEE94F00F03677 /* Build configuration list for PBXNativeTarget "SoluDateTests" */ = {
+		B58CA6FC1EBF157200F03677 /* Build configuration list for PBXNativeTarget "SoluDate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B58CA6A81EBEE94F00F03677 /* Debug */,
-				B58CA6A91EBEE94F00F03677 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B58CA6EE1EBF0D4400F03677 /* Build configuration list for PBXNativeTarget "SoluDate" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B58CA6EF1EBF0D4400F03677 /* Debug */,
-				B58CA6F01EBF0D4400F03677 /* Release */,
+				B58CA6FD1EBF157200F03677 /* Debug */,
+				B58CA6FE1EBF157200F03677 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
