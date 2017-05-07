@@ -223,15 +223,54 @@ public class SoluDateConverter {
 
         return dateFromJuliusDays(monthStart+lunarDay-1)
     }
+
+    fileprivate static func leapFromDate(_ day: Int,_ month: Int,_ year: Int) -> Int {
+        var lunarDay: Int = 0
+        var lunarMonth: Int = 0
+        var lunarYear: Int = 0
+        var lunarLeap: Int = 0
+        let timeZone: Double = 0
+        let dayNumber: Int = juliusDaysFromDate(day, month, year)
+        let k: Int = INT((Double(dayNumber) - 2415021.076998695) / 29.530588853)
+        var monthStart: Int = getNewMoonDay(k+1, timeZone)
+        if (monthStart > dayNumber) {
+            monthStart = getNewMoonDay(k, timeZone)
+        }
+        var a11: Int = getLunarMonth11(year, timeZone)
+        var b11: Int = a11
+        if (a11 >= monthStart) {
+            lunarYear = year
+            a11 = getLunarMonth11(year-1, timeZone)
+        } else {
+            lunarYear = year+1
+            b11 = getLunarMonth11(year+1, timeZone)
+        }
+        lunarDay = dayNumber-monthStart+1
+        let diff: Int = INT((Double(monthStart) - Double(a11))/29)
+        lunarLeap = 0
+        lunarMonth = diff + 11
+
+        if (b11 - a11 > 365) {
+            let leapMonthDiff: Int = getLeapMonthOffset(a11, timeZone)
+            if (diff >= leapMonthDiff) {
+                lunarMonth = diff + 10
+                if (diff == leapMonthDiff) {
+                    lunarLeap = 1
+                }
+            }
+        }
+
+        return lunarLeap
+    }
 }
 
 extension SoluDateConverter {
-    public static func lunarDateFromSonarDate(_ date: Date) -> LuDate {
+    public static func lunarDateFromSonarDate(_ date: Date) -> Date? {
         let comps: DateComponents = Calendar.current.dateComponents([.day, .month, .year, .timeZone], from: date)
         let day = comps.day!
         let month = comps.month!
         let year = comps.year!
-        let rawComs = convertSolar2Lunar(day, month, year, 0.0)
+        let rawComs = convertSolar2Lunar(day, month, year, 7.0)
         var lunarComps = DateComponents()
         lunarComps.day = rawComs[0]
         lunarComps.month = rawComs[1]
@@ -239,26 +278,33 @@ extension SoluDateConverter {
         lunarComps.year = rawComs[2]
         let leap = rawComs[3]
         lunarComps.isLeapMonth = Bool(leap as NSNumber)
-
-        let lunarDate: LuDate = LuDate(day: rawComs[0], month: rawComs[1], year: rawComs[2], leap: rawComs[3])
-
-        return  lunarDate
+        
+        let date = NSCalendar(identifier: NSCalendar.Identifier.gregorian)?.date(from: lunarComps as DateComponents)
+        
+        return  date
     }
 
-    public static func sonarDateFromLunarDate(_ date: LuDate) -> Date? {
-        let rawComs = convertLunar2Solar(date.day, date.month, date.year, date.leap, 7.0)
-        guard let rawSonarComps = rawComs else {
-            return nil
+    public static func sonarDateFromLunarDate(_ date: Date) -> Date? {
+        let comps: DateComponents = Calendar.current.dateComponents([.day, .month, .year, .timeZone], from: date)
+        let day = comps.day!
+        let month = comps.month!
+        let year = comps.year!
+        let leap = leapFromDate(day, month, year)
+        let jdComps = convertLunar2Solar(day, month, year, leap, 7.0)
+        
+        var date: Date?
+        
+        if let jdComps = jdComps {
+            let c = NSDateComponents()
+            c.day = jdComps[0]
+            c.month = jdComps[1]
+            c.year = jdComps[2]
+            
+            date = NSCalendar(identifier: NSCalendar.Identifier.gregorian)?.date(from: c as DateComponents)
+        } else {
+            date = nil
         }
-        var sonarComps: DateComponents = DateComponents()
-        sonarComps.day = rawSonarComps[0]
-        sonarComps.month = rawSonarComps[1]
-        sonarComps.year = rawSonarComps[2]
-        let leap = rawSonarComps[3]
-        sonarComps.isLeapMonth = Bool(leap as NSNumber)
-
-        let sonarDate: Date? = sonarComps.date
-
-        return  sonarDate
+        
+        return  date
     }
 }
