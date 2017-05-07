@@ -5,13 +5,13 @@
 
 import Foundation
 
-class LuDate {
-    var day: Int
-    var month: Int
-    var year: Int
-    var leap: Int
+public class LuDate {
+    public var day: Int
+    public var month: Int
+    public var year: Int
+    public var leap: Int
     
-    init(day: Int, month: Int, year: Int, leap: Int = 0) {
+    public init(day: Int, month: Int, year: Int, leap: Int = 0) {
         self.day = day
         self.month = month
         self.year = year
@@ -19,7 +19,7 @@ class LuDate {
     }
 }
 
-class SoluDateConverter {
+public class SoluDateConverter {
     fileprivate static let PI = Double.pi
 
     fileprivate static func juliusDaysFromDate(_ dd: Int, _ mm: Int, _ yy: Int) -> Int {
@@ -226,7 +226,7 @@ class SoluDateConverter {
 }
 
 extension SoluDateConverter {
-    static func lunarDateFromSonarDate(_ date: Date) -> LuDate {
+    public static func lunarDateFromSonarDate(_ date: Date) -> LuDate {
         let comps: DateComponents = Calendar.current.dateComponents([.day, .month, .year, .timeZone], from: date)
         let day = comps.day!
         let month = comps.month!
@@ -245,7 +245,7 @@ extension SoluDateConverter {
         return  lunarDate
     }
 
-    static func sonarDateFromLunarDate(_ date: LuDate) -> Date? {
+    public static func sonarDateFromLunarDate(_ date: LuDate) -> Date? {
         let rawComs = convertLunar2Solar(date.day, date.month, date.year, date.leap, 7.0)
         guard let rawSonarComps = rawComs else {
             return nil
