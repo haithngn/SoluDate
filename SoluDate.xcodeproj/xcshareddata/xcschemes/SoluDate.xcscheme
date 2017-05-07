@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B58CA6E81EBF0D4400F03677"
+               BlueprintIdentifier = "B58CA6F61EBF157200F03677"
                BuildableName = "SoluDate.framework"
                BlueprintName = "SoluDate"
                ReferencedContainer = "container:SoluDate.xcodeproj">
