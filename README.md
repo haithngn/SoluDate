@@ -15,9 +15,8 @@ Sonar Date to Lunar Date Converter
 
 ### Usage
 ```swift
-let date: LuDate = SoluDateConverter.lunarDateFromSonarDate(Date())
-
-print("Lunar Date \(date.day) \(date.month) \(date.year)")
+let date: Date? = SoluDateConverter.lunarDateFromSonarDate(Date())
+print("Lunar Date \(date)")
 ```
 ### Thanks
 * Converting algorithm from https://www.informatik.uni-leipzig.de/~duc/amlich/calrules.html
