@@ -3,8 +3,7 @@ Sonar Date to Lunar Date Converter
 
 ### Features
 - [x] Convert from Sonar date (Date) to Lunar date
-- [x] Convert from Lunar date (LuDate) to Sonar date
-- [ ] Convert from Lunar date (Date) to Sonar date
+- [x] Convert from Lunar date (Date) to Sonar date
 
 ### Installation
 * Carthage
